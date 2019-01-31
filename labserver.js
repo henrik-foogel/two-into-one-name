@@ -19,14 +19,14 @@ var firstFile = fs.readFile('./one.txt', options, (err, data) => {
         } else {
             console.log(data2);
         }
-        fs.writeFile('third.txt', data+data2, optionsTwo, (err) => {
+        fs.writeFile('three.txt', data+data2, optionsTwo, (err) => {
             if(err) {
                 console.log(err)
             } else {
                 console.log('Filen är sparad')
             }
 
-            var thirdFile = fs.readFile('./third.txt', options, (err, data3) => {
+            var thirdFile = fs.readFile('./three.txt', options, (err, data3) => {
                 if(err) {
                     console.log(err)
                 } else {
