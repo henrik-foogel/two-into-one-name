@@ -9,26 +9,26 @@ var optionsTwo = {encoding: 'utf8', flag: 'w'};
 
 var firstFile = fs.readFile('./one.txt', options, (err, data) => {
     if(err) {
-        console.log(err)
+        console.error(err)
     } else {
         console.log(data)
     }
     var secondFile = fs.readFile('./two.txt', options, (err, data2) => {
         if(err) {
-            console.log(err)
+            console.error(err)
         } else {
             console.log(data2);
         }
         fs.writeFile('three.txt', data+data2, optionsTwo, (err) => {
             if(err) {
-                console.log(err)
+                console.error(err)
             } else {
                 console.log('Filen är sparad')
             }
 
             var thirdFile = fs.readFile('./three.txt', options, (err, data3) => {
                 if(err) {
-                    console.log(err)
+                    console.error(err)
                 } else {
                     console.log(data3);
                 }
